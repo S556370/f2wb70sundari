@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-
+var universityRouter = require('./routes/university');
 var gridBuildRouter = require('./routes/gridbuild');
 var selectorRouter = require('./routes/selector');
 var app = express();
@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-
+app.use('/university', universityRouter);
 app.use('/gridbuild', gridBuildRouter);
 app.use('/selector', selectorRouter);
 
